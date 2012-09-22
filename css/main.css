@@ -6,9 +6,40 @@
 
 
 
+*{
+	color: #fffeee;
+}
 
+body{
+	background-color:#233432;
+}
 
+.tweet{
+	padding: 20px;
+	width:500px;
+	margin:10px;
+	border-top: 1px solid #eee;
+}
 
+.tweet img{
+	margin-right:10px;
+	float:left;
+
+}
+
+.fromUserName{
+	font-size:10px;
+	text-decoration: underline;
+}
+
+.fromUser{
+	font-size:12px;
+	font-weight: bold;
+}
+
+.text{
+	font-size:14px;
+}
 
 
 

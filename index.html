@@ -31,19 +31,24 @@
 
         <div class="container">
 
-            <div> 
-                <form  data-bind="submit: search">
-                    <label for="searchValue">Twitter Search:</label> 
-                    <input id="searchValue" type="text"/>
+            
+                <form id="form-search" class="form-inline" data-bind="submit: search">
+                    <!-- <label for="searchValue">Twitter Search:</label> --> 
+                    <input id="searchValue" type="text" placeholder="Search Twitter..." />
+                    <input type="submit" value="search" class="btn" />
                 </form>
                 <div data-bind="foreach: tweets">
                     <div class="tweet">
                         <p>
                             <img data-bind="attr:{src: profileImgUrl}" />
                             <span class="fromUser" data-bind="text: fromUserName"></span><br />
-                            @<span class="fromUserName" data-bind="text: fromUser"></span>
+                            <a class="fromUserName" data-bind="attr:{href: fromUserLink}">@<span data-bind="text: fromUser"></span></a>
                         </p>
-                        <p class="text" data-bind="text: text"></p>
+                        <p class="text" data-bind="html: text"></p>
+                        <p>
+                            <small><span class="createdAt" data-bind="text: createdAt"></span>
+                            <!-- <span data-bind="html: sourceUrl"></span></small> -->
+                        </p>
                     </div>
                 </div>
 
